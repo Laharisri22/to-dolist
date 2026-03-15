@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="sidebar">
+    <a href="{{ url_for('home') }}">
+    <i>🏠</i> <span>home</span>
+</a>
+
+<a href="{{ url_for('create') }}">
+    <i>➕</i> <span>create</span>
+</a>
+
+<a href="{{ url_for('history') }}">
+    <i>📜</i> <span>history</span>
+</a>
+
+<a href="{{ url_for('about') }}">
+    <i>💗</i> <span>about</span>
+</a>
+</div>
+
+<div class="main center">
+    <div class="card animate">
+        <h1>Task History</h1>
+        <ul id="historyList"></ul>
+        <p id="emptyMsg">No history available</p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

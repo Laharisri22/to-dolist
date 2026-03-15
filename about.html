@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List App</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="sidebar">
+    <a href="{{ url_for('home') }}">
+    <i>🏠</i> <span>home</span>
+</a>
+
+<a href="{{ url_for('create') }}">
+    <i>➕</i> <span>create</span>
+</a>
+
+<a href="{{ url_for('history') }}">
+    <i>📜</i> <span>history</span>
+</a>
+
+<a href="{{ url_for('about') }}">
+    <i>💗</i> <span>about</span>
+</a>
+</div>
+
+
+</body>
+</html>

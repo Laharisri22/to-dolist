@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="{{ url_for('home') }}">
+        <i>🏠</i> <span>home</span>
+    </a>
+
+    <a href="{{ url_for('create') }}">
+        <i>➕</i> <span>create</span>
+    </a>
+
+    <a href="{{ url_for('history') }}">
+        <i>📜</i> <span>history</span>
+    </a>
+
+    <a href="{{ url_for('about') }}">
+        <i>💗</i> <span>about</span>
+    </a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+
+    <div class="welcome-container">
+        <h1 class="welcome-title">
+            Welcome to My website! 🎉
+        </h1>
+
+        <p class="welcome-subtitle">
+            Organize your tasks and stay productive ✨
+        </p>
+    </div>
+
+    <div class="task-preview">
+        <h2>My Tasks</h2>
+        <ul id="homeTaskList"></ul>
+    </div>
+
+</div>
+
+<!-- ✅ IMPORTANT: Link JS file -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
